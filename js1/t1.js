@@ -16,6 +16,19 @@ function getRandomColor( ) {
 }
 
 
+function isRepeat(arr){
+    var hash = {};    
+    for(var i in arr) {
+    if(hash[arr[i]]) //hash 哈希
+        return true;
+        hash[arr[i]] = true;
+}
+    return false;
+    
+}
+
+
+
 function s(){
         
         for(var i=0;i<9;i++){
@@ -43,14 +56,18 @@ function s(){
         //     }
         //     colors.push(color);
         // }
-
-        while(colors.length<3){
-            var f = "#" + getRandomColor()
-            colors.push(f);
-        }
-       
-    
-    // body
+     
+            while(colors.length<3){
+                if(!isRepeat(colors)){
+                    var f = "#" + getRandomColor();
+                    colors.push(f);
+                }
+                else {
+                    colors = [];
+                }
+   
+            }
+           
         console.log(result);
         console.log(colors);
         node[result[0]].style.background = colors[0];
@@ -60,11 +77,15 @@ function s(){
         colors =[];
         arr = [0,1,2,3,4,5,6,7,8];
         result=[];
+    
+    // body
+        
     }
 
     
    
 function start(){
+    clearInterval(dq);
     dq = setInterval(s,1000);
 }
 
