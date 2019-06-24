@@ -1,0 +1,187 @@
+
+
+/*框架*/
+html,body{
+	padding:0;
+	margin:0;
+	width:100%;
+	height:100%;
+	font-size:16px;
+}
+.wrap{
+	display:flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+.content-body{
+	background:#29bde0;
+	display: flex;
+	flex:1;
+	height: 100%;
+}
+.scorllbody{
+	overflow: auto;
+}
+.content{
+	
+	flex:1;
+	height: 100%;
+
+}
+header,footer{
+	background: #29bde0;
+}
+
+header{
+	height: 120px;
+}
+footer{
+	height:100px;
+}
+/*布局头部两行，固定上方*/
+.vote{
+	display: flex;
+	flex:1;
+	flex-direction: column;
+
+}
+.votetop{
+	display: flex;
+	flex:1;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 40px;
+	padding-top:5px;
+	margin:0 20px 0 20px;
+}
+.votetop img{
+
+	width:23px;
+	height: 23px;
+}
+.votetop>span{
+
+	color:white;
+	font-size: 20px;
+}
+
+.votebottom{
+	display:flex;
+	flex-direction: column;
+	background-color: #b9e9f5;
+}	
+
+.tag{ width:100%; height:43px; position:relative; background-color: #b9e9f5;}
+.arrow{ position:absolute; width:40px; height:40px; bottom:-40px; left:100px; }
+.arrow *{ display:block; border-width:10px; position:absolute; border-style:solid dashed dashed dashed; font-size:0; line-height:0; }
+.arrow em{border-color:#b9e9f5 transparent transparent; right:50px;}
+.arrow span{border-color:transparent transparent; top:-10px;}
+
+.col{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	flex:1;
+	margin:0 17px 0 25px;
+	padding-top:5px;
+	position: relative;
+
+}
+.col img{
+	flex:1;
+	justify-content: row-reverse;
+	width:30px;
+	height: 30px;
+}
+
+.tag p{
+	position: absolute;
+	color:white;
+	left:70px;
+	bottom:-40px;
+	font-size:12px;
+}
+
+/*当中votebox布局*/
+.votebox{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	
+}
+.voteboxrow{
+	display: flex;
+	flex:1;
+
+	
+
+}
+.voteboxbody{
+	
+	display: flex;
+	flex-direction: column;
+	
+	align-items: center;
+		width:100px;
+	height: 103px;
+
+}
+
+.voteboxbody:hover .iconrow{
+	display: block;
+}
+
+.voteboxchild{
+	border: 2px solid #FFF;
+	width:68px;
+	height:68px;
+
+}
+
+.vbctop{
+	background-color: #f5c97b;
+	width:64px;
+	height: 46px;
+	line-height: 46px;
+	text-align: center;
+
+}
+.vbcbottom{
+	background-color: #83b09a;
+	color:white;
+	width:64px;
+	height: 18px;
+	text-align: center;
+}
+.iconrow{margin-top: 6px;}
+.iconrow{
+	display: none;
+}
+.iconrow>a>img{
+	width:14px;
+	height: 14px;
+}
+
+
+
+/*foot*/
+.btn{
+	display: flex;
+	width: 100%;
+		margin-top:20px;
+	height: 100px;
+	border:none;
+		
+}
+
+.btnvote{
+	border:none;
+	background: #fbb435;
+	color:white;
+	height:45px;
+	line-height: 45px;
+	width:248px;
+}
