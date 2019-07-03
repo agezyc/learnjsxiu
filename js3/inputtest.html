@@ -1,0 +1,90 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d"></div>
+    <input type="button" value="生成" id="btn"/>
+    <script>
+        var txt=document.getElementById("txt");
+        var d=document.getElementById("d");
+        var btn=document.getElementById("btn");
+        //此方法字符串具有不可变性，频繁的操作字符串会造成内存的浪费。
+    //    btn.onclick=function(){
+    //        for(var i=0;i<10;i++){
+    //            d.innerHTML+="<input type='text'><br />";
+    //        }
+    //    }
+        //因此我们可以先定义一个数组，将字符串存储在数组当中，最后在将数组转化为字符串。
+        var arr=[];
+        btn.onclick=function(){
+            for(var i=0;i<10;i++){
+                arr.push("<input type='text'><br />");
+            }
+            d.innerHTML=arr.join("");
+        }
+    </script>
+    </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加div并绑定点击事件</title>
+    <style>
+        div.btn{
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border: solid 1px #000;
+            cursor: pointer;
+        }
+        div.innerDiv{
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="aa">
+    <div class="btn">添加div并绑定点击事件</div>
+    <div class="outerDiv"></div>
+</div>
+<script>
+    function getClass(classname) {
+        return document.getElementsByClassName(classname);
+    }
+    getClass('btn')[0].onclick=function () {
+        addDom();
+    }
+//    将点击事件封装为函数
+    function funA() {
+        for(var i=0;i<getClass('innerDiv').length;i++){
+            getClass('innerDiv')[i].onclick=function () {
+                alert(this.innerText);
+            }
+        }
+    }
+//    将添加dom封装为函数
+    function addDom() {
+        var oldHtml='';
+        for(var j=0;j<6;j++){
+            oldHtml+='<div class="innerDiv">'+j+'</div>'
+        }
+        getClass('outerDiv')[0].innerHTML=oldHtml;
+        funA();
+    }
+//    如果将函数A放在这里就不会起作用的
+//    funA();
+</script>
+</body>
+</html>
