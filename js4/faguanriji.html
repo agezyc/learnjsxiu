@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">  
+	<title>visionselect</title>
+	<link rel="stylesheet" href="css/mis7dis.css">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body class="wrap">
+		<script src="lib/javascript-state-machine-master/state-machine.js"></script>
+		<header class="ht60">
+		<div class="vote">
+			<div class="votetop">
+				<div><img src="img/discuss_03.png" alt=""></div>
+				<span>法官台本</span>
+				<div><img src="img/discuss_05.png" alt=""></div>
+				</div>
+			
+		</div>
+		</header>
+		<div class="content-body scorllbody bcgrey" >
+		<main class="content">
+			<div class="votebootom bcgrey">
+				<!-- <div class="tagtaiben"> 					
+						 <div class="coltaiben">
+   						
+   							<p>第一天</p>
+                        </div>
+						<div class="dicusskuai" id="btndays">
+							
+							<div class="arrowcenter">
+								<div class="arrow-top"> <em></em><span></span></div>
+							</div>
+							<div class="votevoteboxrowtaiben">
+								
+								<div class="talkbalen">
+									<div class="circle1"><div class="sun"><img src="img/no2_03.png" alt=""></div></div>
+								
+										<div class="arrow-left"></div><div class="taldis" id = "killsren0"><span>杀手杀人</span></div>
+								</div>
+							</div>
+							<div class="votevoteboxrowtaiben">
+								
+								<div class="talkbalen">
+									<div class="circle1"><div class="sun"><img src="img/no2_07.png" alt=""></div></div>
+										<div class="arrow-left"></div><div class="taldis" id = "talkTalk"><span>亡灵发表遗言</span></div>
+								</div>
+							</div>
+							<div class="votevoteboxrowtaiben">
+								
+								<div class="talkbalen">
+									<div class="circle1"><div class="sun"><img src="img/no2_07.png" alt=""></div></div>
+										<div class="arrow-left"></div><div class="taldis" id = "playerTalk"><span>玩家依次发言</span></div>
+								</div>
+							</div>
+							<div class="votevoteboxrowtaiben">
+								
+								<div class="talkbalen">
+									<div class="circle1"><div class="sun"><img src="img/no2_07.png" alt=""></div></div>
+										<div class="arrow-left"></div><div class="taldis" id = "allVote"><span>全民投票</span></div>
+								</div>
+								
+							</div>
+							
+						   </div>
+						   
+				</div> -->
+				
+
+            </div>
+			</main>
+		
+
+		</div>
+		<footer>
+            <div class="btnpos">
+                <div class="btn2">
+                    <a href="result.html"><input type="button" value="结束游戏" class="btnvote"></a>
+                </div>
+                <div class="btn2">
+                    <a href="discuss.html"><input type="button" value="法官日志" class="btnvote"></a>
+                </div>
+            </div>
+		</footer>
+<script src="shengchengtianshu.js"></script>
+<script src="faguantaiben.js"></script>
+<script>
+	fsm.current = localStorage.current;
+	console.log(fsm.current);
+	</script>
+</body>
+
+</html>

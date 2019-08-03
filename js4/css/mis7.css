@@ -1,0 +1,174 @@
+/*整体布局*/
+
+
+body,html{
+	padding: 0;
+	margin:0;
+	font-size: 16px;
+	width: 100%;
+	height: 100%;
+}
+
+.wrap{
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+header,footer{
+	height: 33px;
+	background: #29bde0;
+}
+
+.content-body{
+	display: flex;
+	flex:1;
+	background: #f0f0f0;
+}
+
+.wrap-site{
+	 flex: 1;
+     overflow-x: hidden; overflow-y: auto;
+     
+}
+.overroll{
+	flex:1;
+	overflow-y: scroll;
+}
+.contentbody{
+	flex:1;
+	
+}
+
+
+/*head*/
+
+header>img{
+	margin-left:5px;
+	margin-top:8px;
+	width:21px;
+	height:15px;
+}
+
+/*content*/
+.box{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border:1px solid black;
+}
+
+.boxtop{
+	display: flex;
+	flex:1;
+	height: 60px;
+	background:white;
+	color:#9a9a9a;
+	border:1px solid #c9c9c9;
+	justify-content: space-between;
+	align-items:center;
+	font-size: 20px;
+}
+
+.boxbottom{
+	
+	display: flex;
+	background:white;
+	flex:1;
+	flex-direction: column;
+	justify-content: center;
+	margin:10px;
+
+}
+.boxbottom>div{
+	
+	display: flex;
+	flex:1;
+
+}
+.btmtitle{
+	height: 43px;
+	border-bottom:1px solid #fcc768;
+	justify-content: center;
+	align-items:center;
+	color:#fcc768;
+	font-size: 20px;
+	margin-bottom: 20px;
+
+}
+
+.btmbtn{
+	margin:15px 17px; 
+	background: #69d1e9;
+	height:130px;
+	flex: 1;
+	justify-content: center;
+	align-items:center;
+	color:white;
+	font-size: 20px;
+}
+.btmbtn>p{
+	
+	justify-content: center;
+	align-items:center;
+}
+.btmtext{
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	color:#bcbcbc;
+	font-size: 15px;
+}
+.cir{
+	padding-top:10px;
+	 display: flex;
+	 flex:1;
+	 justify-content: center;
+	 align-items:flex-end;
+}
+.circle{ 
+	 	
+	  width: 10px;     
+	  height: 10px;      
+	  background-color:#69d1e9;      
+	  border-radius: 50%;      
+	  -moz-border-radius: 50%;      
+	 -webkit-border-radius: 50%; 
+	 margin-left:5px;
+	 }
+.boxhome{
+		
+		position: relative;
+}
+
+.ar {
+	display: flex;
+	align-items:center;
+}
+
+.ml3 {
+	margin-right:32px;
+}
+/*.boxleft{
+
+ 	position: absolute;
+ 	left:95.2%;
+ 	top:50%;
+ }
+*/
+
+/*.boxtop>div{
+	display:flex;
+	flex:1;
+}
+
+.boxtop>div:nth-child(1){
+	flex:1;
+	flex-direction: center;
+	align-self: center;
+}
+.boxtop>div:nth-child(2){
+	flex:1;
+	flex-direction: row-reverse;
+	align-self: center;
+}*/

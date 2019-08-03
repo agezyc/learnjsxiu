@@ -1,0 +1,80 @@
+<!-- 
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		请输入字符：<input type="text" id='d0'/>
+		<hr />
+		你是输入的字符为: <div id='d1'></div>
+		
+		<script>
+			var input = document.getElementById('d0')
+			
+			var div = document.getElementById('d1');
+			input.oninput = function(){
+				div.innerHTML = input.value;
+			}
+ 
+		</script>
+	</body>
+</html>
+
+    <!-- 
+--------------------- 
+作者：兰亭古墨 
+来源：CSDN 
+原文：https://blog.csdn.net/hefeng6500/article/details/75194506 
+版权声明：本文为博主原创文章，转载请附上博文链接！ -->
+
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+ 
+    <input type="text" id="input">
+    <div id="show"></div>
+    <script>
+        function defineProperty(obj, attr){
+            var val;
+            Object.defineProperty(obj, attr, {
+                get: function () {
+                    return val;
+                },
+                set: function (newValue) {
+                    if (newValue === val){
+                        return;
+                    }
+                    val = newValue;
+                    document.getElementById("input").value = newValue;
+                    document.getElementById("show").innerHTML = newValue;
+                }
+            });
+        }
+     
+        var obj = {};
+        defineProperty(obj, "txt");
+        document.getElementById("input").addEventListener("keyup", function(e){
+            obj.txt = e.target.value;
+        })
+    </script>
+    
+</body>
+</html>
+<!-- 
+--------------------- 
+作者：兰亭古墨 
+来源：CSDN 
+原文：https://blog.csdn.net/hefeng6500/article/details/75194506 
+版权声明：本文为博主原创文章，转载请附上博文链接！ -->
