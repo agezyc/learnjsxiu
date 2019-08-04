@@ -55,10 +55,11 @@ function parseDom(arg) {
 　　 return objE.childNodes;
 
 };
-
+var havekill;
 function del() {
     var msg = "确定要杀死此玩家吗？\n\n请确认！";
     if (confirm(msg)==true){
+        havekill =1;
     return true;
     }else{
     return false;
@@ -79,7 +80,7 @@ rs.addEventListener('click',function(e){
    
         
     }}
-    else {
+    else if(havekill==1){
         window.location.href = "faguanriji.html";
     }
 
@@ -100,7 +101,7 @@ btn.addEventListener('click',function(e){
     var wanjia = e.target;
  
     if(wanjia.className=='vbctop'){    
-        if(strPage == 'sharren.html'){
+        if(strPage == 'sharren.html' && wanjia.innerHTML!= '杀手'){
             if(del()){
                 wanjia.className = "fb";
                 if(wanjia.innerHTML == '平民'){
@@ -151,7 +152,7 @@ btn.addEventListener('click',function(e){
 
     var faguanchakan = document.getElementById('faguan');
     localStorage.b = faguanchakan.innerHTML;
-    console.log(wanjia);
+    console.log(wanjia.innerHTML);
 },false)
 
 //dom div转换

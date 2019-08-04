@@ -39,6 +39,7 @@ function parseDom(arg) {
 function del() {
     var msg = "确定要投此玩家吗？\n\n请确认！";
     if (confirm(msg)==true){
+    havekill =1;
     return true;
     }else{
     return false;
@@ -69,7 +70,7 @@ rs.addEventListener('click',function(e){
     if(pp<=0 || ss<=0) {
         window.location.href = "result.html";
     }
-    else {
+    else if(havekill==1) {
         window.location.href = "faguanriji.html";
     }
 })
@@ -82,7 +83,7 @@ var pp;
 var ss;
 var pnum;
 var snum;
-
+var havekill;
 
 btn.addEventListener('click',function(e){
     var title = e.target.id;
