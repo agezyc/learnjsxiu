@@ -1,0 +1,35 @@
+body {
+    background:url(../bac.jpg) no-repeat;
+    background-size:100%;
+    height: 100%;
+}
+
+.loginwindow {
+    width:30%;
+    height: 300px;
+    border-radius: 10px;
+    background: #FFF;
+    margin:0 auto;
+    margin-top:200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    color:orange;
+    input {
+        margin-top:20px;
+        height: 30px;
+        width:200px;
+        
+    }
+    button {
+        color: #FFF;
+        margin-bottom:20px;
+        margin-top:30px;
+        height: 30px;
+        width:200px;
+        border: none;
+        background: orange;
+        border-radius: 30px;
+    }
+}
